@@ -1,13 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import InputShared from '../../components/sharedInput';
 import ButtonShared from '../../components/sharedButton';
-// import { useDispatch, useSelector } from 'react-redux';
-// import { setProductsThunk } from './redux/Products/thunks';
-import Styles from '../../constants/styles.module.css';
-import arr from './array';
+import { useDispatch, useSelector } from 'react-redux';
+import { getProducts } from '../../redux/Product/thunks';
 
+import Styles from '../../constants/styles.module.css';
 const Products = () => {
+  const dispatch = useDispatch();
+  const { product, isLoadingProducts } = useSelector((state) => state.product);
+
+  useEffect(() => {
+    dispatch(() => getProducts(dispatch));
+  }, []);
+
+  console.log(product);
+
   const {
     register,
     handleSubmit,
@@ -34,12 +42,12 @@ const Products = () => {
           </tr>
         </thead>
         <tbody>
-          {arr.map((item) => {
+          {product.products.map((item) => {
             return (
               <tr>
-                <td>{item.id}</td>
+                <td>{item._id}</td>
                 <td>{item.name}</td>
-                <td>{item.description}</td>
+                <td>{item.stock}</td>
                 <td>{item.price}</td>
                 <td>Editar</td>
                 <td>Eliminar</td>

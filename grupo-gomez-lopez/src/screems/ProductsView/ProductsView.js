@@ -16,18 +16,22 @@ const Products = () => {
   }, [dispatch]);
   const { isLoadingProducts } = useSelector((state) => state.product);
 
-  // const {
-  //   register,
-  //   handleSubmit,
-  //   watch,
-  //   formState: { errors },
-  // } = useForm();
-  // const onSubmit = (data) => console.log(data);
-  //
-  // const mail = watch("mail");
-  // console.log(mail);
-  // const pass = watch("pass");
-  // console.log(pass);
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = (data) => console.log(data);
+
+  const handleInputChange = (event) => {
+    console.log('ass');
+  };
+
+  //   const mail = watch("mail");
+  //   console.log(mail);
+  //   const pass = watch("pass");
+  //   console.log(pass);
   return (
     <>
       <table className={Styles.prodtable}>
@@ -35,7 +39,7 @@ const Products = () => {
           <tr>
             <th>ID</th>
             <th>Nombre</th>
-            <th>Descripcion</th>
+            <th>Stock</th>
             <th>Precio</th>
           </tr>
         </thead>
@@ -58,8 +62,9 @@ const Products = () => {
 
       <h1>Carga de productos</h1>
 
-      {/* <form className={Styles.main} onSubmit={handleSubmit(onSubmit)}>
-        <p>Ingrese sus datos de usuario y contraseña</p>
+      <form className={Styles.main} onSubmit={handleSubmit(onSubmit)}>
+        <p>Ingrese los datos del producto</p>
+
         <InputShared
           placeholder={'Nombre'}
           styleshare={Styles.inputbox}
@@ -68,7 +73,7 @@ const Products = () => {
           name={'name'}
         />
         <InputShared
-          placeholder={'Descripción'}
+          placeholder={'Stock'}
           styleshare={Styles.inputbox}
           type={'text'}
           register={register}
@@ -87,7 +92,7 @@ const Products = () => {
           styleshare={Styles.buttonStyles}
           type={'submit'}
         />
-      </form> */}
+      </form>
     </>
   );
 };

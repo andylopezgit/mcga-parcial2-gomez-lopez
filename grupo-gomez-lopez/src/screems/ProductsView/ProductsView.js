@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { useForm } from 'react-hook-form';
-import InputShared from '../../components/sharedInput';
-import ButtonShared from '../../components/sharedButton';
-import { getProducts } from '../../redux/Product/thunks';
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useForm } from "react-hook-form";
+import InputShared from "../../components/sharedInput";
+import ButtonShared from "../../components/sharedButton";
+import { getProducts, addProducts } from "../../redux/Product/thunks";
 
-import Styles from '../../constants/styles.module.css';
+import Styles from "../../constants/styles.module.css";
 
 const Products = () => {
   const dispatch = useDispatch();
@@ -14,6 +14,7 @@ const Products = () => {
   useEffect(() => {
     dispatch(() => getProducts(dispatch));
   }, [dispatch]);
+
   const { isLoadingProducts } = useSelector((state) => state.product);
 
   const {
@@ -22,7 +23,11 @@ const Products = () => {
     watch,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+
+  const onSubmit = (data) => {
+    console.log("data a subir", data);
+    addProducts(dispatch, data);
+  };
 
   //   const mail = watch("mail");
   //   console.log(mail);
@@ -62,31 +67,38 @@ const Products = () => {
         <p>Ingrese los datos del producto</p>
 
         <InputShared
-          placeholder={'Nombre'}
+          placeholder={"Nombre"}
           styleshare={Styles.inputbox}
-          type={'text'}
+          type={"text"}
           register={register}
-          name={'name'}
+          name={"name"}
         />
         <InputShared
-          placeholder={'Stock'}
+          placeholder={"Stock"}
           styleshare={Styles.inputbox}
-          type={'text'}
+          type={"number"}
           register={register}
-          name={'description'}
+          name={"stock"}
         />
         <InputShared
-          placeholder={'Precio'}
+          placeholder={"Precio"}
           styleshare={Styles.inputbox}
-          type={'text'}
+          type={"number"}
           register={register}
-          name={'price'}
+          name={"price"}
+        />
+        <InputShared
+          placeholder={"Descripcion"}
+          styleshare={Styles.inputbox}
+          type={"text"}
+          register={register}
+          name={"description"}
         />
         <ButtonShared
-          text='Enviar'
+          text="Enviar"
           // Click={'/'}
           styleshare={Styles.buttonStyles}
-          type={'submit'}
+          type={"submit"}
         />
       </form>
     </>

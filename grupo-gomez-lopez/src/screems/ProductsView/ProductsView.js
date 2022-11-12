@@ -4,17 +4,16 @@ import InputShared from '../../components/sharedInput';
 import ButtonShared from '../../components/sharedButton';
 import { useDispatch, useSelector } from 'react-redux';
 import { getProducts } from '../../redux/Product/thunks';
-
 import Styles from '../../constants/styles.module.css';
+import arr from './array';
+
 const Products = () => {
   const dispatch = useDispatch();
-  const { product, isLoadingProducts } = useSelector((state) => state.product);
+  const { product } = useSelector((state) => state.product);
 
   useEffect(() => {
     dispatch(() => getProducts(dispatch));
-  }, []);
-
-  console.log(product);
+  }, [dispatch]);
 
   const {
     register,
@@ -24,10 +23,13 @@ const Products = () => {
   } = useForm();
   const onSubmit = (data) => console.log(data);
 
-  const mail = watch('mail');
-  console.log(mail);
-  const pass = watch('pass');
-  console.log(pass);
+  //   const mail = watch('mail');
+  //   console.log(mail);
+  //   const pass = watch('pass');
+  //   console.log(pass);
+  console.log('traigo prod.prod', product.products);
+  console.log('traigo prod', product);
+  console.log('arr', arr);
 
   return (
     <>
@@ -59,15 +61,8 @@ const Products = () => {
 
       <h1>Carga de productos</h1>
 
-      <form className={Styles.main} onSubmit={handleSubmit(onSubmit)}>
+      {/* <form className={Styles.main} onSubmit={handleSubmit(onSubmit)}>
         <p>Ingrese sus datos de usuario y contraseña</p>
-        <InputShared
-          placeholder={'ID'}
-          styleshare={Styles.inputbox}
-          type={'text'}
-          register={register}
-          name={'id'}
-        />
         <InputShared
           placeholder={'Nombre'}
           styleshare={Styles.inputbox}
@@ -95,7 +90,7 @@ const Products = () => {
           styleshare={Styles.buttonStyles}
           type={'submit'}
         />
-      </form>
+      </form> */}
     </>
   );
 };

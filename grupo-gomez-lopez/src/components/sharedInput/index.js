@@ -1,13 +1,20 @@
-import React from 'react';
-import { Form } from 'react-router-dom';
+import React from "react";
+import { useForm } from "react-hook-form";
 
-const InputShared = ({ placeholder, styleshare, type, register, name }) => {
+const InputShared = ({
+  placeholder,
+  styleshare,
+  type,
+  register,
+  name,
+  required,
+}) => {
   return (
     <input
       type={type}
       className={styleshare}
       placeholder={placeholder}
-      {...register(name)}
+      {...register(name, { required })}
     />
   );
 };

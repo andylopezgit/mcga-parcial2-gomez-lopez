@@ -8,13 +8,19 @@ const InputShared = ({
   register,
   name,
   required,
+  max,
+  pattern,
 }) => {
   return (
     <input
       type={type}
       className={styleshare}
       placeholder={placeholder}
-      {...register(name, { required })}
+      {...register(name, {
+        required: required,
+        maxLength: max,
+        pattern: pattern,
+      })}
     />
   );
 };

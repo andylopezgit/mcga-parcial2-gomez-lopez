@@ -6,10 +6,21 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 
 const Login = ({ style }) => {
-  const { register, handleSubmit, watch } = useForm();
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm();
+
+  const pattern = /^[A-Za-z]+$/i;
   const navigate = useNavigate();
 
+  console.log(watch("userName"));
+
   const checkField = false;
+
+  const userName = "userName";
 
   const onSubmit = (data) => {
     const validUser = { userName: "grupo", password: "1234" };
@@ -26,11 +37,17 @@ const Login = ({ style }) => {
         <InputShared
           type="text"
           placeholder="usuario"
-          name={"userName"}
+          name={userName}
           register={register}
-          required
+          required={true}
+          max={5}
           styleshare={style.form}
+          pattern={pattern}
         />
+        {errors?.userName?.type === "maxLength" && (
+          <p>El usuario no puede exceder 5 caracteres</p>
+        )}
+        {errors?.userName?.type === "pattern" && <p>No se permiten numero</p>}
         <InputShared
           type="password"
           placeholder="password"

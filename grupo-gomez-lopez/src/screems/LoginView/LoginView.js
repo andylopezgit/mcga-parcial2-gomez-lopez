@@ -1,12 +1,12 @@
 import React from "react";
 import LoginComponent from "../../components/Login/Login";
+import styles from "./login.module.css";
 
 const Login = () => {
   return (
-    <>
-      <h1>Vista login</h1>
-      <LoginComponent />
-    </>
+    <div className={styles.container}>
+      <LoginComponent style={styles} />
+    </div>
   );
 };
 

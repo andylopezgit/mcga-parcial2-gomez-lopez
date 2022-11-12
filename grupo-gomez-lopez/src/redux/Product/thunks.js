@@ -3,14 +3,14 @@ import {
   showProducts,
   dismissIsLoading,
   setIsLoading,
-} from "./actions";
+} from './actions';
 
 export const getProducts = async (dispatch) => {
   dispatch(setIsLoading());
   let response = await fetch(
-    "https://mcga-2022-backend.vercel.app/api/products"
+    'https://mcga-2022-backend.vercel.app/api/products'
   );
-  //let response = await fetch("http://localhost:3000/api/products");
+
   let data = await response.json();
   if (data) {
     dispatch(setProducts(data.data));

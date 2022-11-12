@@ -6,7 +6,7 @@ import {
   UPDATE_PRODUCT,
   SET_ISLOADING,
   DISMISS_ISLOADING,
-} from "./types";
+} from './types';
 
 export const setProducts = (products) => {
   return {

@@ -1,5 +1,4 @@
 import React from 'react';
-//import sharedButtonCSS from './sharedButtonCSS';
 
 const ButtonShared = ({ text, Click, styleshare, type }) => {
   return (

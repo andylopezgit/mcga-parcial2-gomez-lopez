@@ -1,0 +1,8 @@
+#nav-bar {
+    display: flex;
+    width: 100%;
+}
+
+#nav-bar ul li{
+    text-decoration: none;
+}

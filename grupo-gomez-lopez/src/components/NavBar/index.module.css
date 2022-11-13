@@ -1,8 +1,19 @@
-#nav-bar {
+.nav {
     display: flex;
     width: 100%;
+    background-color: #0d6199;
+    flex-direction: row;
+    color: white;
 }
 
-#nav-bar ul li{
+.nav ul {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+}
+
+.nav ul li {
+    margin-left: 10px;
+    list-style: none;
     text-decoration: none;
 }

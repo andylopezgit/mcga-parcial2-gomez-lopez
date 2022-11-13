@@ -25,7 +25,7 @@ const Login = ({ style }) => {
   const onSubmit = (data) => {
     const validUser = { userName: "grupo", password: "1234" };
     if (data.userName === "grupo" && data.password === "1234") {
-      navigate("/products");
+      navigate("/dashboard");
     } else {
       this.checkField = true;
     }

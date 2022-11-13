@@ -6,8 +6,8 @@ const NavBar = () => {
   return (
     <nav className={styles.nav}>
       <div>
-        <span>MCGA - 2022 </span>
-        <span>Grupo Lopez-Gomez</span>
+        <span>MCGA - 2022 - </span>
+        <span> Grupo: Lopez - Gomez</span>
       </div>
       <div className={styles.navR}>
         <ul>

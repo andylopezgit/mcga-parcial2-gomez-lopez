@@ -1,11 +1,15 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { useForm } from "react-hook-form";
-import InputShared from "../../components/sharedInput";
-import ButtonShared from "../../components/sharedButton";
-import { getProducts, addProducts } from "../../redux/Product/thunks";
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useForm } from 'react-hook-form';
+import InputShared from '../../components/sharedInput';
+import ButtonShared from '../../components/sharedButton';
+import {
+  getProducts,
+  addProducts,
+  deleteItem,
+} from '../../redux/Product/thunks';
 
-import Styles from "../../constants/styles.module.css";
+import Styles from '../../constants/styles.module.css';
 
 const Products = () => {
   const dispatch = useDispatch();
@@ -25,14 +29,15 @@ const Products = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log("data a subir", data);
+    //console.log('data a subir', data);
     addProducts(dispatch, data);
   };
 
-  //   const mail = watch("mail");
-  //   console.log(mail);
-  //   const pass = watch("pass");
-  //   console.log(pass);
+  const submitToDelete = (idToDelete) => {
+    console.log('id a eliminar', idToDelete);
+    deleteItem(dispatch, idToDelete);
+  };
+
   return (
     <>
       <table className={Styles.prodtable}>
@@ -53,8 +58,23 @@ const Products = () => {
                   <td>{item.name}</td>
                   <td>{item.stock}</td>
                   <td>{item.price}</td>
-                  <td>Editar</td>
-                  <td>Eliminar</td>
+                  <td>
+                    <ButtonShared
+                      text='Eliminar'
+                      Click={() => submitToDelete(item._id)}
+                      styleshare={Styles.buttonStyles}
+                      type={'submit'}
+                    />
+                  </td>
+
+                  <td>
+                    <button
+                      key={item._id}
+                      onClick={() => submitToDelete(item._id)}
+                    >
+                      quitar
+                    </button>
+                  </td>
                 </tr>
               );
             })}
@@ -67,38 +87,38 @@ const Products = () => {
         <p>Ingrese los datos del producto</p>
 
         <InputShared
-          placeholder={"Nombre"}
+          placeholder={'Nombre'}
           styleshare={Styles.inputbox}
-          type={"text"}
+          type={'text'}
           register={register}
-          name={"name"}
+          name={'name'}
         />
         <InputShared
-          placeholder={"Stock"}
+          placeholder={'Stock'}
           styleshare={Styles.inputbox}
-          type={"number"}
+          type={'number'}
           register={register}
-          name={"stock"}
+          name={'stock'}
         />
         <InputShared
-          placeholder={"Precio"}
+          placeholder={'Precio'}
           styleshare={Styles.inputbox}
-          type={"number"}
+          type={'number'}
           register={register}
-          name={"price"}
+          name={'price'}
         />
         <InputShared
-          placeholder={"Descripcion"}
+          placeholder={'Descripcion'}
           styleshare={Styles.inputbox}
-          type={"text"}
+          type={'text'}
           register={register}
-          name={"description"}
+          name={'description'}
         />
         <ButtonShared
-          text="Enviar"
+          text='Enviar'
           // Click={'/'}
           styleshare={Styles.buttonStyles}
-          type={"submit"}
+          type={'submit'}
         />
       </form>
     </>

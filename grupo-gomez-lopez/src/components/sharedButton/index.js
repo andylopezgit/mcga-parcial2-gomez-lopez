@@ -8,11 +8,3 @@ const ButtonShared = ({ text, Click, styleshare, type }) => {
 };
 
 export default ButtonShared;
-
-// const ButtonShared = ({ text, Click, styleshare }) => {
-//   return (
-//     <button onClick={Click} type={{ styleshare }}>
-//       {text}
-//     </button>
-//   )
-// }

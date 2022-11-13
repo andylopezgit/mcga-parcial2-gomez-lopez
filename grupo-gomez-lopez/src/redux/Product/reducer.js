@@ -6,7 +6,7 @@ import {
   UPDATE_PRODUCT,
   SET_ISLOADING,
   DISMISS_ISLOADING,
-} from "./types";
+} from './types';
 
 const INITIAL_STATE = {
   isLoadingProducts: false,
@@ -21,6 +21,11 @@ const reducer = (state = INITIAL_STATE, action) => {
         product: action.payload,
       };
     case SET_PRODUCTS:
+      return {
+        ...state,
+        product: action.payload,
+      };
+    case DELETE_PRODUCT:
       return {
         ...state,
         product: action.payload,

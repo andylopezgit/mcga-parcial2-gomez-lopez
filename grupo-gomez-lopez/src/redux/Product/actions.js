@@ -17,6 +17,15 @@ export const setProducts = (products) => {
   };
 };
 
+export const deleteProducts = (products) => {
+  return {
+    type: SET_PRODUCTS,
+    payload: {
+      products: products,
+    },
+  };
+};
+
 export const showProducts = (products) => {
   return {
     type: SHOW_PRODUCTS,

@@ -1,16 +1,16 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { useForm } from 'react-hook-form';
-import InputShared from '../../components/sharedInput';
-import ButtonShared from '../../components/sharedButton';
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useForm } from "react-hook-form";
+import InputShared from "../../components/sharedInput";
+import ButtonShared from "../../components/sharedButton";
 import {
   getProducts,
   addProducts,
   deleteItem,
   modifyItem,
-} from '../../redux/Product/thunks';
+} from "../../redux/Product/thunks";
 
-import Styles from '../../constants/styles.module.css';
+import Styles from "../../constants/styles.module.css";
 
 const Products = () => {
   const dispatch = useDispatch();
@@ -39,29 +39,15 @@ const Products = () => {
   };
 
   const submitToModify = (itemToModify) => {
-    console.log('submitToModify item a modificar', itemToModify);
-    console.log('submitToModify item a modificar id', itemToModify._id);
     modifyItem(dispatch, itemToModify);
   };
 
-  //   const [editing, setEditing] = useState(false);
-  //   const initialFormState = { id: null, name: '', username: '' };
-  //   const [currentUser, setCurrentUser] = useState(initialFormState);
-
   const ProdToModify = (item) => {
-    // const { setValue } = useForm({
-    //   defaultValues: item,
-    // });
-
-    console.log('prodToModify item a modificar', item);
-    console.log('prodToModify item a modificar price', item.price);
-    //setValue(item);
-    setValue('nameEdit', item.name);
-    setValue('priceEdit', item.price);
-    setValue('stockEdit', item.stock);
-    setValue('descriptionEdit', item.description);
-    setValue('_id', item._id);
-    console.log('setvalue price', item.price);
+    setValue("nameEdit", item.name);
+    setValue("priceEdit", item.price);
+    setValue("stockEdit", item.stock);
+    setValue("descriptionEdit", item.description);
+    setValue("_id", item._id);
   };
 
   return (
@@ -88,18 +74,18 @@ const Products = () => {
                   <td>{item.description}</td>
                   <td>
                     <ButtonShared
-                      text='Eliminar'
+                      text="Eliminar"
                       Click={() => submitToDelete(item._id)}
                       styleshare={Styles.buttonStyles}
-                      type={'submit'}
+                      type={"submit"}
                     />
                   </td>
                   <td>
                     <ButtonShared
-                      text='Editar'
+                      text="Editar"
                       Click={() => ProdToModify(item)}
                       styleshare={Styles.buttonStyles}
-                      type={'submit'}
+                      type={"submit"}
                     />
                   </td>
                 </tr>
@@ -112,38 +98,37 @@ const Products = () => {
         <p>Modifique los valores y haga clicn en "Modificar"</p>
 
         <InputShared
-          placeholder={'name'}
+          placeholder={"name"}
           styleshare={Styles.inputbox}
-          type={'text'}
+          type={"text"}
           register={register}
-          name={'nameEdit'}
+          name={"nameEdit"}
         />
         <InputShared
-          placeholder={'Stock'}
+          placeholder={"Stock"}
           styleshare={Styles.inputbox}
-          type={'number'}
+          type={"number"}
           register={register}
-          name={'stockEdit'}
+          name={"stockEdit"}
         />
         <InputShared
-          placeholder={'Precioss'}
+          placeholder={"Precioss"}
           styleshare={Styles.inputbox}
-          type={'number'}
+          type={"number"}
           register={register}
-          name={'priceEdit'}
+          name={"priceEdit"}
         />
         <InputShared
-          placeholder={'Descripcion'}
+          placeholder={"Descripcion"}
           styleshare={Styles.inputbox}
-          type={'text'}
+          type={"text"}
           register={register}
-          name={'descriptionEdit'}
+          name={"descriptionEdit"}
         />
         <ButtonShared
-          text='Modificar'
-          // Click={'/'}
+          text="Modificar"
           styleshare={Styles.buttonStyles}
-          type={'submit'}
+          type={"submit"}
         />
       </form>
 
@@ -152,38 +137,37 @@ const Products = () => {
         <p>Ingrese los datos del producto</p>
 
         <InputShared
-          placeholder={'Nombre'}
+          placeholder={"Nombre"}
           styleshare={Styles.inputbox}
-          type={'text'}
+          type={"text"}
           register={register}
-          name={'name'}
+          name={"name"}
         />
         <InputShared
-          placeholder={'Stock'}
+          placeholder={"Stock"}
           styleshare={Styles.inputbox}
-          type={'number'}
+          type={"number"}
           register={register}
-          name={'stock'}
+          name={"stock"}
         />
         <InputShared
-          placeholder={'Precio'}
+          placeholder={"Precio"}
           styleshare={Styles.inputbox}
-          type={'number'}
+          type={"number"}
           register={register}
-          name={'price'}
+          name={"price"}
         />
         <InputShared
-          placeholder={'Descripcion'}
+          placeholder={"Descripcion"}
           styleshare={Styles.inputbox}
-          type={'text'}
+          type={"text"}
           register={register}
-          name={'description'}
+          name={"description"}
         />
         <ButtonShared
-          text='Agregar producto'
-          // Click={'/'}
+          text="Agregar producto"
           styleshare={Styles.buttonStyles}
-          type={'submit'}
+          type={"submit"}
         />
       </form>
     </>

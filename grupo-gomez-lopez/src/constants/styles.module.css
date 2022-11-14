@@ -17,7 +17,6 @@
 .inputbox {
   appearance: none;
   outline: 0;
-  /* width: auto; */
   margin: 10px;
   border-radius: 3px;
   padding: 10px 15px;
@@ -36,7 +35,6 @@
 }
 .inputbox:focus {
   background-color: rgb(170, 198, 255);
-  /* width: 300px; */
   color: rgb(3, 20, 91);
 }
 
@@ -53,11 +51,9 @@
 }
 .buttonStyles:hover {
   background-color: fade(rgb(13, 6, 151), 40%);
-  /* width: 300px; */
 }
 .buttonStyles:focus {
   background-color: rgb(170, 198, 255);
-  /* width: 300px; */
 
   color: rgb(3, 20, 91);
 }

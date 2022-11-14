@@ -57,3 +57,30 @@ export const deleteItem = async (dispatch, idToDelete) => {
   await getProducts(dispatch);
   dismissIsLoading();
 };
+
+export const modifyItem = async (dispatch, prodToModify) => {
+  const product = {};
+  product._id = prodToModify._id;
+  product.name = prodToModify.nameEdit;
+  product.price = prodToModify.priceEdit;
+  product.stock = prodToModify.stockEdit;
+  product.description = prodToModify.descriptionEdit;
+
+  const url =
+    'https://mcga-2022-backend.vercel.app/api/products/update/' + product._id;
+  console.log('url', url);
+  console.log('Produt en el thunk ', product);
+
+  //dispatch(setIsLoading());
+  let response = await fetch(url, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(product),
+  });
+  let data = await response.json();
+  console.log('esta es la respuesta del put', data);
+  await getProducts(dispatch);
+  dismissIsLoading();
+};

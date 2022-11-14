@@ -7,6 +7,7 @@ import {
   getProducts,
   addProducts,
   deleteItem,
+  modifyItem,
 } from '../../redux/Product/thunks';
 
 import Styles from '../../constants/styles.module.css';
@@ -26,16 +27,41 @@ const Products = () => {
     handleSubmit,
     watch,
     formState: { errors },
+    setValue,
   } = useForm();
 
   const onSubmit = (data) => {
-    //console.log('data a subir', data);
     addProducts(dispatch, data);
   };
 
   const submitToDelete = (idToDelete) => {
-    console.log('id a eliminar', idToDelete);
     deleteItem(dispatch, idToDelete);
+  };
+
+  const submitToModify = (itemToModify) => {
+    console.log('submitToModify item a modificar', itemToModify);
+    console.log('submitToModify item a modificar id', itemToModify._id);
+    modifyItem(dispatch, itemToModify);
+  };
+
+  //   const [editing, setEditing] = useState(false);
+  //   const initialFormState = { id: null, name: '', username: '' };
+  //   const [currentUser, setCurrentUser] = useState(initialFormState);
+
+  const ProdToModify = (item) => {
+    // const { setValue } = useForm({
+    //   defaultValues: item,
+    // });
+
+    console.log('prodToModify item a modificar', item);
+    console.log('prodToModify item a modificar price', item.price);
+    //setValue(item);
+    setValue('nameEdit', item.name);
+    setValue('priceEdit', item.price);
+    setValue('stockEdit', item.stock);
+    setValue('descriptionEdit', item.description);
+    setValue('_id', item._id);
+    console.log('setvalue price', item.price);
   };
 
   return (
@@ -47,6 +73,7 @@ const Products = () => {
             <th>Nombre</th>
             <th>Stock</th>
             <th>Precio</th>
+            <th>Descripción</th>
           </tr>
         </thead>
         <tbody>
@@ -58,6 +85,7 @@ const Products = () => {
                   <td>{item.name}</td>
                   <td>{item.stock}</td>
                   <td>{item.price}</td>
+                  <td>{item.description}</td>
                   <td>
                     <ButtonShared
                       text='Eliminar'
@@ -66,23 +94,60 @@ const Products = () => {
                       type={'submit'}
                     />
                   </td>
-
                   <td>
-                    <button
-                      key={item._id}
-                      onClick={() => submitToDelete(item._id)}
-                    >
-                      quitar
-                    </button>
+                    <ButtonShared
+                      text='Editar'
+                      Click={() => ProdToModify(item)}
+                      styleshare={Styles.buttonStyles}
+                      type={'submit'}
+                    />
                   </td>
                 </tr>
               );
             })}
         </tbody>
       </table>
+      <h1>Edición de productos</h1>
+      <form className={Styles.main} onSubmit={handleSubmit(submitToModify)}>
+        <p>Modifique los valores y haga clicn en "Modificar"</p>
+
+        <InputShared
+          placeholder={'name'}
+          styleshare={Styles.inputbox}
+          type={'text'}
+          register={register}
+          name={'nameEdit'}
+        />
+        <InputShared
+          placeholder={'Stock'}
+          styleshare={Styles.inputbox}
+          type={'number'}
+          register={register}
+          name={'stockEdit'}
+        />
+        <InputShared
+          placeholder={'Precioss'}
+          styleshare={Styles.inputbox}
+          type={'number'}
+          register={register}
+          name={'priceEdit'}
+        />
+        <InputShared
+          placeholder={'Descripcion'}
+          styleshare={Styles.inputbox}
+          type={'text'}
+          register={register}
+          name={'descriptionEdit'}
+        />
+        <ButtonShared
+          text='Modificar'
+          // Click={'/'}
+          styleshare={Styles.buttonStyles}
+          type={'submit'}
+        />
+      </form>
 
       <h1>Carga de productos</h1>
-
       <form className={Styles.main} onSubmit={handleSubmit(onSubmit)}>
         <p>Ingrese los datos del producto</p>
 
@@ -115,7 +180,7 @@ const Products = () => {
           name={'description'}
         />
         <ButtonShared
-          text='Enviar'
+          text='Agregar producto'
           // Click={'/'}
           styleshare={Styles.buttonStyles}
           type={'submit'}

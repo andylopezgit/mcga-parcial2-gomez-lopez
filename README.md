@@ -1,7 +1,7 @@
 "# mcga-parcial2-gomez-lopez" 
 
 # Andrés López ✔
-Julian Gomez ✔
+# Julian Gomez ✔
 
 Materia: MCGA - Carrera: Ingeniería. en Sistemas de Información 
 

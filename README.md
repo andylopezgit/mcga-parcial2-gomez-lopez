@@ -22,7 +22,8 @@ Materia: MCGA - Carrera: Ingeniería. en Sistemas de Información
  <img width="350" src="https://repository-images.githubusercontent.com/174038031/a02fa380-8742-11eb-89ae-675029f4cb04">
 </p>
 
-* Para el Front se utilizo React
+* Para el Frontend se utilizo React
+* Para los formularios se uso React Hook Form
 * Los datos se persisten en una base de datos en Atlas Mongodb
 * Mediante el uso del ORM Monsoose
 
@@ -33,6 +34,6 @@ Materia: MCGA - Carrera: Ingeniería. en Sistemas de Información
  * [PostmanDoc](https://documenter.getpostman.com/view/11198688/2s83tGoWr6)
 
 # :red_car: Deploy
-
+* FRONTEDN : localhost
 * BACKEND : https://mcga-2022-backend.vercel.app/
 * BASE DE DATOS: https://cloud.mongodb.com/

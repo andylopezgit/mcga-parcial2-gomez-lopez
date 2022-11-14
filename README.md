@@ -6,7 +6,7 @@
 Materia: MCGA - Carrera: Ingeniería. en Sistemas de Información 
 
 * :argentina: Andres Lopez [LinkedIn](https://www.linkedin.com/in/andresl%C3%B3pez/) - [GitHub](https://github.com/andylopezgit)
-* :argentina: Julian Gomez 
+* :argentina: Julian Gomez [LinkedIn](https://www.linkedin.com/in/%F0%9F%92%BB-juli%C3%A1n-gomez-50342619b/) - [GitHub](https://github.com/ejecutorHarlan)
 
 # :articulated_lorry: Proyecto Parcial 2 - Frontend
 

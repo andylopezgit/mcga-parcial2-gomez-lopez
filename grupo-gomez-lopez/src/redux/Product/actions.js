@@ -26,6 +26,15 @@ export const deleteProducts = (products) => {
   };
 };
 
+export const updateProducts = (products) => {
+  return {
+    type: UPDATE_PRODUCT,
+    payload: {
+      products: products,
+    },
+  };
+};
+
 export const showProducts = (products) => {
   return {
     type: SHOW_PRODUCTS,

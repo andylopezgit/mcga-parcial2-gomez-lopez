@@ -34,6 +34,6 @@ Materia: MCGA - Carrera: Ingeniería. en Sistemas de Información
  * [PostmanDoc](https://documenter.getpostman.com/view/11198688/2s83tGoWr6)
 
 # :red_car: Deploy
-* FRONTEDN : localhost
+* FRONTEND : localhost
 * BACKEND : https://mcga-2022-backend.vercel.app/
 * BASE DE DATOS: https://cloud.mongodb.com/

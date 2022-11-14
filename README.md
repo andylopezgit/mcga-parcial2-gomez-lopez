@@ -19,6 +19,7 @@ Materia: MCGA - Carrera: Ingeniería. en Sistemas de Información
 
 <p align="center">
  <img width="350" src="http://nightdeveloper.net/wp-content/uploads/2018/02/React_logo_wordmark-1024x344.png">
+ <img width="350" src="https://repository-images.githubusercontent.com/174038031/a02fa380-8742-11eb-89ae-675029f4cb04">
 </p>
 
 * Para el Front se utilizo React

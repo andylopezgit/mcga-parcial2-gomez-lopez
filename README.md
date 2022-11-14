@@ -18,7 +18,7 @@ Materia: MCGA - Carrera: Ingeniería. en Sistemas de Información
 # :truck: Tecnologías Utilizadas  
 
 <p align="center">
- <img width="350" src="https://miro.medium.com/max/594/1*vK4MHL_jpKKmUFGjE5H9jw.png">
+ <img width="350" src="[https://miro.medium.com/max/594/1*vK4MHL_jpKKmUFGjE5H9jw.png](https://w7.pngwing.com/pngs/403/269/png-transparent-react-react-native-logos-brands-in-colors-icon-thumbnail.png)">
 </p>
 
 * Para el Front se utilizo React

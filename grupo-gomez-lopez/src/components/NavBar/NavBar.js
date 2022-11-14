@@ -1,8 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import styles from "./index.module.css";
 
 const NavBar = () => {
+  const navigator = useNavigate();
+  const logout = () => {
+    navigator("/");
+  };
+
   return (
     <nav className={styles.nav}>
       <div>
@@ -18,7 +23,7 @@ const NavBar = () => {
             <Link to="products">Products</Link>
           </li>
         </ul>
-        <button>Logout</button>
+        <button onClick={() => logout()}>Logout</button>
       </div>
     </nav>
   );

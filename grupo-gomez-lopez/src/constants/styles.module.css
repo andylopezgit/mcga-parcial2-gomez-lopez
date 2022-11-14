@@ -20,8 +20,7 @@
   margin: 10px;
   border-radius: 3px;
   padding: 10px 15px;
-  /* margin: 0 auto 10px auto;
-  display: block; */
+
   text-align: center;
   font-size: 12px;
   color: rgb(19, 9, 111);
@@ -31,7 +30,6 @@
 }
 .inputbox:hover {
   background-color: fade(rgb(13, 6, 151), 40%);
-  /* width: 270px; */
 }
 .inputbox:focus {
   background-color: rgb(170, 198, 255);

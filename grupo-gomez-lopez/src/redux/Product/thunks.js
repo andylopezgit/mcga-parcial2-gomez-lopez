@@ -14,17 +14,17 @@ export const getProducts = async (dispatch) => {
     );
 
     let data = await response.json();
-    if (data) {
+
+    if (response.status !== 200) {
+      dispatch(setProducts([]));
+      dismissIsLoading();
+    } else {
       dispatch(setProducts(data.data));
       dispatch(dismissIsLoading());
     }
-    if (data.status === 400) {
-      dispatch(setProducts([]));
-      dismissIsLoading();
-    }
     dismissIsLoading();
-  } catch (e) {
-    console.error(e);
+  } catch (error) {
+    throw new Error(error);
   }
 };
 
@@ -43,10 +43,14 @@ export const addProducts = async (dispatch, product) => {
     );
     let data = await response.json();
 
-    await getProducts(dispatch);
-    dismissIsLoading();
-  } catch (e) {
-    console.error(e);
+    if (response.status !== 200) {
+      dismissIsLoading();
+    } else {
+      dismissIsLoading();
+      await getProducts(dispatch);
+    }
+  } catch (error) {
+    throw new Error(error);
   }
 };
 
@@ -61,10 +65,15 @@ export const deleteItem = async (dispatch, idToDelete) => {
       method: "DELETE",
     });
     let data = await response.json();
-    await getProducts(dispatch);
-    dismissIsLoading();
-  } catch (e) {
-    console.error(e);
+
+    if (response.status !== 200) {
+      dismissIsLoading();
+    } else {
+      dismissIsLoading();
+      await getProducts(dispatch);
+    }
+  } catch (error) {
+    throw new Error(error);
   }
 };
 
@@ -88,9 +97,14 @@ export const modifyItem = async (dispatch, prodToModify) => {
       body: JSON.stringify(product),
     });
     let data = await response.json();
-    await getProducts(dispatch);
-    dismissIsLoading();
-  } catch (e) {
-    console.error(e);
+
+    if (response.status !== 200) {
+      dismissIsLoading();
+    } else {
+      dismissIsLoading();
+      await getProducts(dispatch);
+    }
+  } catch (error) {
+    throw new Error(error);
   }
 };

@@ -7,6 +7,7 @@ import AboutView from "./screems/AboutView/AboutView";
 import ProductsView from "./screems/ProductsView/ProductsView";
 import PublicView from "./screems/PublicPage/PublicView";
 import Dashboard from "./screems/DashboardView/Dashboard";
+import Home from "./components/Home/Home";
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
         <Route path="/login" element={<LoginView />} />
         **<Route path="*" element={<h1>Page-not-found-404</h1>}></Route>**
         <Route path="dashboard" element={<Dashboard />}>
-          <Route path="about" element={<AboutView />} />
+          <Route path="home" element={<Home />} />
           <Route path="products" element={<ProductsView />} />
         </Route>
       </Routes>

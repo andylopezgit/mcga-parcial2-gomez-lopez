@@ -12,10 +12,7 @@ const NavBar = () => {
       <div className={styles.navR}>
         <ul>
           <li>
-            <Link to="/dashboard">Home</Link>
-          </li>
-          <li>
-            <Link to="about">About</Link>
+            <Link to="/dashboard/home">Home</Link>
           </li>
           <li>
             <Link to="products">Products</Link>

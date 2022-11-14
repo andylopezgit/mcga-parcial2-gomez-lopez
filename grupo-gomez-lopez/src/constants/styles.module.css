@@ -2,12 +2,12 @@
   border: 1px solid #c0c0c0;
   border-collapse: collapse;
   padding: 5px;
-  margin: 10px;
+  margin-bottom: 10px;
 }
 .prodtable th {
   border: 1px solid #c0c0c0;
   padding: 5px;
-  background: #f0f0f0;
+  background: rgba(127, 202, 255, 0.35);
 }
 .prodtable td {
   border: 1px solid #c0c0c0;
@@ -38,6 +38,42 @@
   color: rgb(3, 20, 91);
 }
 
+.buttonStylesDelete {
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  width: 150px;
+  transition-duration: 0.25s;
+  font-size: 14px;
+  color: red;
+  border: solid red 2px;
+}
+
+.buttonStylesDelete:hover {
+  background-color: rgba(255, 0, 0, 0.2);
+}
+
+.buttonStylesDeleteEdit {
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  width: 150px;
+  transition-duration: 0.25s;
+  font-size: 14px;
+  color: green;
+  border: solid green 2px;
+}
+
+.buttonStylesDeleteEdit:hover {
+  background-color: rgba(0, 128, 0, 0.17);
+}
+
 .buttonStyles {
   border-radius: 6px;
   display: flex;
@@ -47,10 +83,12 @@
   margin: 10px;
   width: 150px;
   transition-duration: 0.25s;
-  font-size: 12px;
+  font-size: 14px;
+  color: blue;
+  border: solid blue 2px;
 }
 .buttonStyles:hover {
-  background-color: fade(rgb(13, 6, 151), 40%);
+  background-color: rgba(0, 0, 255, 0.18);
 }
 .buttonStyles:focus {
   background-color: rgb(170, 198, 255);

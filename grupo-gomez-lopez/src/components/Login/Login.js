@@ -16,8 +16,6 @@ const Login = ({ style }) => {
   const pattern = /^[A-Za-z]+$/i;
   const navigate = useNavigate();
 
-  console.log(watch("userName"));
-
   const checkField = false;
 
   const userName = "userName";

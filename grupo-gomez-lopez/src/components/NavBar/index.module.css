@@ -1,0 +1,50 @@
+.nav {
+    display: flex;
+    background-color:cornflowerblue;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px;
+    font-size: 18px;
+    color: white;
+
+}
+
+.nav ul {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+}
+
+.nav ul li {
+    margin-left: 10px;
+    list-style: none;
+    text-decoration: none;
+}
+
+.nav ul li a {
+    color: white;
+}
+
+.navR {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navR button {
+    background-color: transparent;
+    border: solid 1px white;
+    color: white;
+    margin-top: 5px;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.navR button:hover {
+    border: solid 1px brown;
+    color: brown;
+    margin-top: 5px;
+    margin-left: 20px;
+    font-size: 20px;
+}

@@ -1,0 +1,13 @@
+.main {
+    padding: 2rem 1rem;
+}
+
+.footer {
+    width: 100vw;
+    height: 50px;
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    background-color: cornflowerblue;
+    color: white;
+}

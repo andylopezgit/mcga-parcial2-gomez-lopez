@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import { Route, Routes } from "react-router-dom";
+import LoginView from "./screems/LoginView/LoginView";
+import Layout from "./screems/LayoutView/Layout.";
+import AboutView from "./screems/AboutView/AboutView";
+import ProductsView from "./screems/ProductsView/ProductsView";
+import PublicView from "./screems/PublicPage/PublicView";
+import Dashboard from "./screems/DashboardView/Dashboard";
+import Home from "./components/Home/Home";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React Grupo
-        </a>
-      </header>
-    </div>
+    <Layout>
+      <Routes>
+        <Route path="/" element={<PublicView />} />
+        <Route path="/login" element={<LoginView />} />
+        **<Route path="*" element={<h1>Page-not-found-404</h1>}></Route>**
+        <Route path="dashboard" element={<Dashboard />}>
+          <Route path="home" element={<Home />} />
+          <Route path="products" element={<ProductsView />} />
+        </Route>
+      </Routes>
+      <div className="App"></div>
+    </Layout>
   );
 }
 

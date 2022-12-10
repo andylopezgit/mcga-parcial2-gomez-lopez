@@ -32,7 +32,7 @@ function PublicView() {
         <section className={styles.section}>
           <article className={styles.article}>
             <h2>Proyecto realizado en React.js + Node.js</h2>
-            <h2>2° Parcial</h2>
+            <h2>FINAL - MCGA</h2>
             <div className={styles.layoutLogos}>
               <img
                 className={styles.logoReact}

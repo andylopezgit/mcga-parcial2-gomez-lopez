@@ -15,10 +15,10 @@ function App() {
       <Routes>
         <Route path="/" element={<PublicView />} />
         <Route path="/login" element={<LoginView />} />
-        **<Route path="*" element={<h1>Page-not-found-404</h1>}></Route>**
         <Route path="dashboard" element={<Dashboard />}>
           <Route path="home" element={<Home />} />
           <Route path="products" element={<ProductsView />} />
+          **<Route path="*" element={<h1>Page-not-found-404</h1>}></Route>**
         </Route>
       </Routes>
       <div className="App"></div>

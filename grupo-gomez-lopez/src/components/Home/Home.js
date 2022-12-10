@@ -10,7 +10,7 @@ const Home = () => {
             <span className={styles.span}>Materia:</span> MCGA
           </h1>
           <h1>
-            <span className={styles.span}>Parcial:</span> N° 2
+            <span className={styles.span}>Final:</span> Fecha 13/12/22
           </h1>
           <h1>
             <span className={styles.span}>Profesores:</span> Martín Barea y

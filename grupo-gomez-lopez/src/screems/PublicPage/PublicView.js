@@ -11,8 +11,8 @@ function PublicView() {
     navigate("/login");
   };
 
-  const onRegister = () => {
-    navigate("/register");
+  const goToPublicDates = () => {
+    navigate("/publicDates");
   };
 
   return (
@@ -24,8 +24,8 @@ function PublicView() {
             <button onClick={onLogin} id={styles.btnLogin}>
               Login
             </button>
-            <button id={styles.btnLogin} onClick={onRegister}>
-              Register
+            <button id={styles.btnLogin} onClick={goToPublicDates}>
+              Public dates
             </button>
           </div>
         </header>

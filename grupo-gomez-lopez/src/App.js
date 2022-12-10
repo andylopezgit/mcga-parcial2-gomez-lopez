@@ -8,6 +8,7 @@ import ProductsView from "./screems/ProductsView/ProductsView";
 import PublicView from "./screems/PublicPage/PublicView";
 import Dashboard from "./screems/DashboardView/Dashboard";
 import Home from "./components/Home/Home";
+import PublicDates from "./screems/PublicDates/PublicDates";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<PublicView />} />
         <Route path="/login" element={<LoginView />} />
+        <Route path="/publicDates" element={<PublicDates />} />
         <Route path="dashboard" element={<Dashboard />}>
           <Route path="home" element={<Home />} />
           <Route path="products" element={<ProductsView />} />

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Form } from "react-router-dom";
 import ButtonShared from "../../components/sharedButton";
 import InputShared from "../../components/sharedInput";
@@ -16,7 +16,7 @@ const Login = ({ style }) => {
   const pattern = /^[A-Za-z]+$/i;
   const navigate = useNavigate();
 
-  const checkField = false;
+  const [checkField, setCheckField] = useState(false);
 
   const userName = "userName";
 
@@ -25,7 +25,7 @@ const Login = ({ style }) => {
     if (data.userName === "grupo" && data.password === "1234") {
       navigate("/dashboard/home");
     } else {
-      this.checkField = true;
+      setCheckField(true);
     }
   };
 

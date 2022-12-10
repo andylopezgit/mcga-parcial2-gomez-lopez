@@ -11,8 +11,8 @@ function PublicView() {
     navigate("/login");
   };
 
-  const onRegister = () => {
-    navigate("/register");
+  const goToPublicDates = () => {
+    navigate("/publicDates");
   };
 
   return (
@@ -24,15 +24,15 @@ function PublicView() {
             <button onClick={onLogin} id={styles.btnLogin}>
               Login
             </button>
-            <button id={styles.btnLogin} onClick={onRegister}>
-              Register
+            <button id={styles.btnLogin} onClick={goToPublicDates}>
+              Public dates
             </button>
           </div>
         </header>
         <section className={styles.section}>
           <article className={styles.article}>
             <h2>Proyecto realizado en React.js + Node.js</h2>
-            <h2>2° Parcial</h2>
+            <h2>FINAL - MCGA</h2>
             <div className={styles.layoutLogos}>
               <img
                 className={styles.logoReact}

@@ -120,3 +120,24 @@ export const modifyItem = async (dispatch, prodToModify) => {
     throw new Error(error);
   }
 };
+export const getProductsPublic = async (dispatch) => {
+  try {
+    dispatch(setIsLoading());
+    let response = await fetch(
+      "https://mcga-2022-backend.vercel.app/api/products/public"
+    );
+
+    let data = await response.json();
+
+    if (response.status !== 200) {
+      dispatch(setProducts([]));
+      dismissIsLoading();
+    } else {
+      dispatch(setProducts(data.data));
+      dispatch(dismissIsLoading());
+    }
+    dismissIsLoading();
+  } catch (error) {
+    throw new Error(error);
+  }
+};

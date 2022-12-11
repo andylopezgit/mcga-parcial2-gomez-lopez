@@ -1,4 +1,4 @@
-"# mcga-parcial2-gomez-lopez" 
+# MCGA - FINAL - 13/12/22 -
 
 # Andrés López ✔
 # Julian Gomez ✔
@@ -8,7 +8,9 @@ Materia: MCGA - Carrera: Ingeniería. en Sistemas de Información
 * :argentina: Andres Lopez [LinkedIn](https://www.linkedin.com/in/andresl%C3%B3pez/) - [GitHub](https://github.com/andylopezgit)
 * :argentina: Julian Gomez [LinkedIn](https://www.linkedin.com/in/%F0%9F%92%BB-juli%C3%A1n-gomez-50342619b/) - [GitHub](https://github.com/ejecutorHarlan)
 
-# :articulated_lorry: Proyecto Parcial 2 - Frontend
+# :articulated_lorry: Proyecto Final (13/12/22) - Frontend
+
+# :articulated_lorry: https://mcga-final-22-lopez-gomez.vercel.app/
 
 <a href="https://github.com/topics/node" target="_blank"><img align="center" alt="Made With NODE"  src="https://img.shields.io/badge/REACT-18.2.0-green"></a>
 <a href="https://documenter.getpostman.com/view/23097436/2s7YYr8jY4" target="_blank"><img align="center" alt="POSTMAN DOC"  src="https://img.shields.io/badge/Postman-ApiDoc-orange"></a>

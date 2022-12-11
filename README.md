@@ -30,8 +30,8 @@ Materia: MCGA - Carrera: Ingeniería. en Sistemas de Información
  
  * [PostmanDoc](https://documenter.getpostman.com/view/11198688/2s83tGoWr6)
 
-# :red_car: Deploy
-:fire: * FRONTEND : https://mcga-final-22-lopez-gomez.vercel.app/
-:fire: * BACKEND : https://mcga-2022-backend.vercel.app/
-:fire: * BASE DE DATOS: https://cloud.mongodb.com/
+# :airplane_arrival: Deploy
+* :fire:  FRONTEND : https://mcga-final-22-lopez-gomez.vercel.app/
+* :fire:  BACKEND : https://mcga-2022-backend.vercel.app/
+* :fire:  BASE DE DATOS: https://cloud.mongodb.com/
 

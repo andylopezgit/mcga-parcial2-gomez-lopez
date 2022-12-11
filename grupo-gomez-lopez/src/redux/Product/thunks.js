@@ -10,7 +10,13 @@ export const getProducts = async (dispatch) => {
   try {
     dispatch(setIsLoading());
     let response = await fetch(
-      "https://mcga-2022-backend.vercel.app/api/products"
+      "https://mcga-2022-backend.vercel.app/api/products",
+      {
+        headers: {
+          "Content-Type": "application/json",
+          authorization: "b62102c1-62be-4b52-b055-589cf7a81a30",
+        },
+      }
     );
 
     let data = await response.json();
@@ -37,6 +43,7 @@ export const addProducts = async (dispatch, product) => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          authorization: "b62102c1-62be-4b52-b055-589cf7a81a30",
         },
         body: JSON.stringify(product),
       }
@@ -63,6 +70,10 @@ export const deleteItem = async (dispatch, idToDelete) => {
 
     let response = await fetch(url, {
       method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+        authorization: "b62102c1-62be-4b52-b055-589cf7a81a30",
+      },
     });
     let data = await response.json();
 
@@ -93,6 +104,7 @@ export const modifyItem = async (dispatch, prodToModify) => {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
+        authorization: "b62102c1-62be-4b52-b055-589cf7a81a30",
       },
       body: JSON.stringify(product),
     });

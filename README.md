@@ -10,9 +10,6 @@ Materia: MCGA - Carrera: Ingeniería. en Sistemas de Información
 
 # :articulated_lorry: Proyecto Final (13/12/22) - Frontend
 
-
-# :fire: https://mcga-final-22-lopez-gomez.vercel.app/
-
 <a href="https://github.com/topics/node" target="_blank"><img align="center" alt="Made With NODE"  src="https://img.shields.io/badge/REACT-18.2.0-green"></a>
 <a href="https://documenter.getpostman.com/view/23097436/2s7YYr8jY4" target="_blank"><img align="center" alt="POSTMAN DOC"  src="https://img.shields.io/badge/Postman-ApiDoc-orange"></a>
 # :truck: Tecnologías Utilizadas
@@ -34,7 +31,7 @@ Materia: MCGA - Carrera: Ingeniería. en Sistemas de Información
  * [PostmanDoc](https://documenter.getpostman.com/view/11198688/2s83tGoWr6)
 
 # :red_car: Deploy
-* FRONTEND : localhost
-* BACKEND : https://mcga-2022-backend.vercel.app/
-* BASE DE DATOS: https://cloud.mongodb.com/
+:fire: * FRONTEND : https://mcga-final-22-lopez-gomez.vercel.app/
+:fire: * BACKEND : https://mcga-2022-backend.vercel.app/
+:fire: * BASE DE DATOS: https://cloud.mongodb.com/
 

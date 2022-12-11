@@ -10,11 +10,12 @@ Materia: MCGA - Carrera: Ingeniería. en Sistemas de Información
 
 # :articulated_lorry: Proyecto Final (13/12/22) - Frontend
 
-# :articulated_lorry: https://mcga-final-22-lopez-gomez.vercel.app/
+
+# :fire: https://mcga-final-22-lopez-gomez.vercel.app/
 
 <a href="https://github.com/topics/node" target="_blank"><img align="center" alt="Made With NODE"  src="https://img.shields.io/badge/REACT-18.2.0-green"></a>
 <a href="https://documenter.getpostman.com/view/23097436/2s7YYr8jY4" target="_blank"><img align="center" alt="POSTMAN DOC"  src="https://img.shields.io/badge/Postman-ApiDoc-orange"></a>
-# :truck: Tecnologías Utilizadas  
+# :truck: Tecnologías Utilizadas
 
 <p align="center">
  <img width="350" src="http://nightdeveloper.net/wp-content/uploads/2018/02/React_logo_wordmark-1024x344.png">

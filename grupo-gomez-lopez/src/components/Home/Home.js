@@ -13,8 +13,8 @@ const Home = () => {
             <span className={styles.span}>Final:</span> Fecha 13/12/22
           </h1>
           <h1>
-            <span className={styles.span}>Profesores:</span> Martín Barea y
-            Esteban Frare
+            <span className={styles.span}>Profesores:</span>
+            Esteban Frare y Martín Barea
           </h1>
           <h1>
             <span className={styles.span}>Alumnos:</span> Julian Gomez - Andrés

@@ -1,10 +1,21 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import styles from "./index.module.css";
+import { useDispatch, useSelector } from "react-redux";
+
+import { setIsLoadingFalse } from "../../redux/Auth/actions";
 
 const NavBar = () => {
   const navigator = useNavigate();
+  const dispatch = useDispatch();
+
+  const cleanLocalStorage = () => {
+    localStorage.removeItem("isLoggin");
+  };
+
   const logout = () => {
+    dispatch(setIsLoadingFalse(dispatch));
+    cleanLocalStorage();
     navigator("/");
   };
 

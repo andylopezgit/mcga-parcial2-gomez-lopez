@@ -1,17 +1,24 @@
-import React, { useState } from "react";
-import { Form } from "react-router-dom";
+import React, { useEffect, useState } from "react";
 import ButtonShared from "../../components/sharedButton";
 import InputShared from "../../components/sharedInput";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+
+import { setIsLoading, setIsLoadingFalse } from "../../redux/Auth/actions";
 
 const Login = ({ style }) => {
+  const dispatch = useDispatch();
+  const { isLogged } = useSelector((state) => state.isLog);
+
   const {
     register,
     handleSubmit,
     watch,
     formState: { errors },
   } = useForm();
+
+  console.log("es false?", isLogged);
 
   const pattern = /^[A-Za-z]+$/i;
   const navigate = useNavigate();
@@ -20,14 +27,23 @@ const Login = ({ style }) => {
 
   const userName = "userName";
 
+  const setLocalStorage = () => {
+    localStorage.setItem("isLoggin", true);
+  };
+
   const onSubmit = (data) => {
     const validUser = { userName: "grupo", password: "1234" };
     if (data.userName === "grupo" && data.password === "1234") {
+      dispatch(setIsLoading(dispatch));
+      setLocalStorage();
       navigate("/dashboard/home");
     } else {
+      dispatch(setIsLoadingFalse(dispatch));
       setCheckField(true);
     }
   };
+
+  const handleLogout = () => {};
 
   return (
     <>

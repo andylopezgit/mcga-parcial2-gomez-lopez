@@ -1,4 +1,4 @@
-# MCGA - FINAL - 13/12/22 -
+# ☢️ MCGA - FINAL - 13/12/22 -
 
 # Andrés López ✔
 # Julian Gomez ✔
@@ -30,7 +30,7 @@ Materia: MCGA - Carrera: Ingeniería. en Sistemas de Información
  
  * [PostmanDoc](https://documenter.getpostman.com/view/11198688/2s83tGoWr6)
 
-# :airplane_arrival: Deploy
+# 💻 Deploy
 * :fire:  FRONTEND : https://mcga-final-22-lopez-gomez.vercel.app/
 * :fire:  BACKEND : https://mcga-2022-backend.vercel.app/
 * :fire:  BASE DE DATOS: https://cloud.mongodb.com/

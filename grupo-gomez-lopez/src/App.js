@@ -17,11 +17,12 @@ function App() {
         <Route path="/" element={<PublicView />} />
         <Route path="/login" element={<LoginView />} />
         <Route path="/publicDates" element={<PublicDates />} />
+
         <Route path="dashboard" element={<Dashboard />}>
           <Route path="home" element={<Home />} />
           <Route path="products" element={<ProductsView />} />
-          **<Route path="*" element={<h1>Page-not-found-404</h1>}></Route>**
         </Route>
+        <Route path="*" element={<h1>Page-not-found-404</h1>}></Route>
       </Routes>
       <div className="App"></div>
     </Layout>

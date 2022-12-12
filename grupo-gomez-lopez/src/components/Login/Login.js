@@ -31,7 +31,7 @@ const Login = ({ style }) => {
 
   let resFromApi = {};
   const checkUserPass = async (body) => {
-    await fetch("http://localhost:3000/api/users", {
+    await fetch("https://mcga-final-22-lopez-gomez.vercel.app/api/users", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

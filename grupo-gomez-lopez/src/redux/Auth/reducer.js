@@ -1,4 +1,4 @@
-import { GET_LOGIN, SET_LOGIN } from "./types";
+import { GET_LOGIN, SET_LOGIN, SET_LOGIN_OUT } from "./types";
 
 const INITIAL_STATE = {
   isLogged: false,
@@ -11,6 +11,13 @@ const reducer = (state = INITIAL_STATE, action) => {
         ...state,
         isLogged: true,
       };
+
+    case SET_LOGIN_OUT:
+      return {
+        ...state,
+        isLogged: false,
+      };
+
     case GET_LOGIN:
       return {
         ...state,

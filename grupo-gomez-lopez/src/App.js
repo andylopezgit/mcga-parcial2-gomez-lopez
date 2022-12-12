@@ -13,7 +13,7 @@ import { useSelector } from "react-redux";
 
 function App() {
   const { isLogged } = useSelector((state) => state.isLog);
-  console.log("desde el router", isLogged);
+  console.log("isLogged", isLogged);
   return (
     <Layout>
       <Routes>

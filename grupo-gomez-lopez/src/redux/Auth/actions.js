@@ -1,4 +1,4 @@
-import { GET_LOGIN, SET_LOGIN } from "./types";
+import { GET_LOGIN, SET_LOGIN, SET_LOGIN_OUT } from "./types";
 
 export const showIsLog = () => {
   return {
@@ -15,7 +15,7 @@ export const setIsLoading = () => {
 
 export const setIsLoadingFalse = () => {
   return {
-    type: SET_LOGIN,
+    type: SET_LOGIN_OUT,
     isLogged: false,
   };
 };

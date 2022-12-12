@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import styles from "./index.module.css";
 import { useDispatch, useSelector } from "react-redux";
 
-import { setIsLoadingFalse } from "../../redux/Auth/actions";
+import { setIsLoading, setIsLoadingFalse } from "../../redux/Auth/actions";
 
 const NavBar = () => {
   const navigator = useNavigate();

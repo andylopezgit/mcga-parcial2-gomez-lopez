@@ -19,6 +19,7 @@ Materia: MCGA - Carrera: Ingeniería. en Sistemas de Información
  <img width="350" src="https://repository-images.githubusercontent.com/174038031/a02fa380-8742-11eb-89ae-675029f4cb04">
 </p>
 
+
 * Para el Frontend se utilizo React
 * Para los formularios se uso React Hook Form
 * Los datos se persisten en una base de datos en Atlas Mongodb

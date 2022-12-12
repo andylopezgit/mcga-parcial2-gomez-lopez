@@ -31,9 +31,30 @@ const Login = ({ style }) => {
     localStorage.setItem("isLoggin", true);
   };
 
-  const onSubmit = (data) => {
-    const validUser = { userName: "grupo", password: "1234" };
-    if (data.userName === "grupo" && data.password === "1234") {
+  let resFromApi = {};
+  const checkUserPass = async (body) => {
+    console.log("BODY", body);
+    await fetch("http://localhost:3000/api/users", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        // 'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: JSON.stringify(body),
+    })
+      .then((response) => response.json())
+      .then((data) => (resFromApi = data));
+  };
+
+  const onSubmit = async (data) => {
+    // const validUser = { userName: "grupo", password: "1234" };
+    const datos = {
+      user: data.userName,
+      pass: data.password,
+    };
+    await checkUserPass(datos);
+
+    if (resFromApi.isLogged === true) {
       dispatch(setIsLoading(dispatch));
       setLocalStorage();
       navigate("/dashboard/home");
@@ -51,15 +72,15 @@ const Login = ({ style }) => {
         <InputShared
           type="text"
           placeholder="usuario"
-          name={userName}
+          name={"userName"}
           register={register}
           required={true}
-          max={5}
+          max={7}
           styleshare={style.form}
           pattern={pattern}
         />
         {errors?.userName?.type === "maxLength" && (
-          <p>El usuario no puede exceder 5 caracteres</p>
+          <p>El usuario no puede exceder 7 caracteres</p>
         )}
         {errors?.userName?.type === "pattern" && <p>No se permiten numero</p>}
         <InputShared
@@ -70,7 +91,7 @@ const Login = ({ style }) => {
           styleshare={style.form}
         />
         <ButtonShared text="Login" type={"submit"} styleshare={style.btn} />
-        {checkField ? <p>Errones</p> : <p></p>}
+        {/*{checkField ? <p>Errones</p> : <p></p>}*/}
       </form>
     </>
   );

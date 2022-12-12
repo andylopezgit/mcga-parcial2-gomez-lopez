@@ -31,11 +31,11 @@ const Login = ({ style }) => {
 
   let resFromApi = {};
   const checkUserPass = async (body) => {
-    await fetch("https://mcga-final-22-lopez-gomez.vercel.app/api/users", {
+    await fetch("https://mcga-2022-backend.vercel.app/api/users", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        // 'Content-Type': 'application/x-www-form-urlencoded',
+        authorization: "",
       },
       body: JSON.stringify(body),
     })

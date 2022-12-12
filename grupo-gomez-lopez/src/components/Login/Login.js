@@ -18,8 +18,6 @@ const Login = ({ style }) => {
     formState: { errors },
   } = useForm();
 
-  console.log("es false?", isLogged);
-
   const pattern = /^[A-Za-z]+$/i;
   const navigate = useNavigate();
 
@@ -33,7 +31,6 @@ const Login = ({ style }) => {
 
   let resFromApi = {};
   const checkUserPass = async (body) => {
-    console.log("BODY", body);
     await fetch("http://localhost:3000/api/users", {
       method: "POST",
       headers: {
